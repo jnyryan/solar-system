@@ -7,23 +7,27 @@ planets["Moon"] = "img/moon.gif";
 planets["Mars"] = "img/marsmap.jpg";
 
 var drawTheSun = function(){
-  return drawPlanet("Sun", 2, {x:1.5, y:1.5, z:1.5});
+  return drawPlanet("Sun", 2, {x:0, y:0, z:0});
+}
+
+var drawMercury = function(){
+  return drawPlanet("Mercury", 0.3, {x:2.5, y:1, z:0});
 }
 
 var drawVenus = function(){
-  return drawPlanet("Venus", 0.7, {x:-1.5, y:0, z:0});
+  return drawPlanet("Venus", 0.7, {x:-5.5, y:0, z:0});
 }
 
 var drawTheEarth = function(){
-  return drawPlanet("Earth", 1, {x:-5.5, y:-2.25, z:0});
+  return drawPlanet("Earth", 1, {x:-7.5, y:-2.25, z:0});
 }
 
 var drawTheMoon = function(){
-  return drawPlanet("Moon", 0.2, {x:-7.5, y:-2, z:0});
+  return drawPlanet("Moon", 0.2, {x:-9.5, y:-2, z:0});
 }
 
 var drawTheMars = function(){
-  return drawPlanet("Mars", 0.8, {x:10, y:4, z:0});
+  return drawPlanet("Mars", 0.8, {x:14, y:4, z:-10});
 }
 
 

@@ -27,60 +27,14 @@
 
 <body>
 
-  <script type="application/x-glsl" id="sky-vertex">
-    varying vec2 vUV; void main() { vUV = uv; vec4 pos = vec4(position, 1.0); gl_Position = projectionMatrix * modelViewMatrix * pos; }
-  </script>
-
-  <script type="application/x-glsl" id="sky-fragment">
-    uniform sampler2D texture; varying vec2 vUV; void main() { vec4 sample = texture2D(texture, vUV); gl_FragColor = vec4(sample.xyz, sample.w); }
-  </script>
-
   <script>
     ////////////////////////////////////////////
     // Set Scene
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 2500);
-    var renderer = new THREE.WebGLRenderer({antialias:true});
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-    camera.position.z = 12;
 
-    var controls = new THREE.OrbitControls(camera, renderer.domElement);
-    
-    var stats = setStats();
-    var sky = drawTheSky();
-    var venus = drawVenus();
-    var earth = drawTheEarth();
-    var mars = drawTheMars();
-    var moon = drawTheMoon();
-    var sun = drawTheSun();
-    animate();
+    var scene, camera, renderer, controls, stats;
+    var sky, sun, venus, mercury, earth, moon, mars;
 
-
-    ////////////////////////////////////////////
-    function animate() {
-
-      requestAnimationFrame(animate);
-      render();
-      controls.update();
-      stats.update();
-    }
-
-    ////////////////////////////////////////////
-    function render() {
-      var timer = -new Date().getTime() * 0.0002;
-      //console.log(timer)
-      //camera.position.x = 1 * Math.cos(timer);
-      //camera.position.z = 5 * Math.sin(timer);
-      moon.rotation.y += 0.06;
-      earth.rotation.y += 0.04;
-      mars.rotation.y += 0.004;
-      sun.rotation.y += 0.01;
-      sky.rotation.x += 0.000;
-      sky.rotation.y += 0.002;
-      sky.rotation.z += 0.000;
-      renderer.render(scene, camera);
-    };
+    init();
   </script>
 
 </body>
