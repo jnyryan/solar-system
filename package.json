@@ -1,0 +1,18 @@
+{
+  "name": "solar-system-polymer",
+  "version": "0.0.1",
+  "description": "the solar system done with polymer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "polymer"
+  ],
+  "author": "John Ryan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
