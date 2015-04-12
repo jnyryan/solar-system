@@ -15,13 +15,15 @@ function init() {
   controls = new THREE.OrbitControls(camera, renderer.domElement);
 
   stats = setStats();
-  sky = drawTheSky();
-  sun = drawTheSun();
-  mercury = drawMercury();
-  venus = drawVenus();
-  earth = drawTheEarth();
-  moon = drawTheMoon();
-  mars = drawTheMars();
+
+  var planets = new Planets();
+  sky = planets.drawTheSky();
+  sun = planets.drawTheSun();
+  mercury = planets.drawMercury();
+  venus = planets.drawVenus();
+  earth = planets.drawTheEarth();
+  moon = planets.drawTheMoon();
+  mars = planets.drawTheMars();
 
   animate();
 }
