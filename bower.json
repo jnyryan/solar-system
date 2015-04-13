@@ -19,6 +19,7 @@
     "polymer": "Polymer/polymer#^0.5",
     "core-ajax": "Polymer/core-ajax#~0.5.5",
     "threejs": "*",
-    "threejs-stats": "*"
+    "threejs-stats": "*",
+    "underscore": "~1.8.3"
   }
 }
