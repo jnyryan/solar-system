@@ -28,24 +28,21 @@ var Planets = (function() {
   };
 
   Planets.prototype.drawTheSky = function() {
-    //var texture = THREE.ImageUtils.loadTexture("img/milkyway.jpg");
-    var texture = THREE.ImageUtils.loadTexture("img/milkyway/Space_Engine_Mag7.jpg");
-    texture.wrapS = THREE.ClampToEdgeWrapping;
-    texture.wrapT = THREE.ClampToEdgeWrapping;
-    //texture.repeat.set(1, 1);
-
-    var geometry = new THREE.SphereGeometry(2048, 32, 32);
-    var material = new THREE.MeshBasicMaterial({
-      map: texture,
-      side: THREE.BackSide
+    // prepare ShaderMaterial
+    var uniforms = {
+        texture: { type: 't', value: THREE.ImageUtils.loadTexture('img/milkyway-highres.jpg') }
+    };
+    var skyMaterial = new THREE.ShaderMaterial( {
+        uniforms: uniforms,
+        vertexShader: document.getElementById('sky-vertex').textContent, fragmentShader: document.getElementById('sky-fragment').textContent
     });
-    var mesh = new THREE.Mesh(geometry, material);
-    mesh.position.x = 0;
-    mesh.position.y = 0;
-    mesh.position.z = 0;
-    scene.add(mesh);
-    return mesh;
-  };
+    // create Mesh with sphere geometry and add to the scene
+    var skyBox = new THREE.Mesh(new THREE.SphereGeometry(250, 60, 40), skyMaterial);
+    skyBox.scale.set(-1, 1, 1);
+    skyBox.eulerOrder = 'XZY';
+    skyBox.renderDepth = 500.0;
+    scene.add(skyBox);
+  }
 
   var drawPlanet = function(item) {
     var texture = THREE.ImageUtils.loadTexture(item.imageLocation);
