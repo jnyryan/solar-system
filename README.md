@@ -1,5 +1,12 @@
 # solar-system
 
+This is a simple proof of concept demo using ***three.js***. 
+
+##Demo
+
+[View Live Demo](https://solar-system-threejs.herokuapp.com)
+
+
 ## References
 http://learningthreejs.com/data/lets_do_a_sky/docs/lets_do_a_sky.html
 http://planetpixelemporium.com/planets.html
