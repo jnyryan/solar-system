@@ -16,10 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.5",
-    "core-ajax": "Polymer/core-ajax#~0.5.5",
     "threejs": "*",
     "threejs-stats": "*",
-    "underscore": "~1.8.3"
+    "underscore": "~1.8.3",
+    "three.js": "~0.73.0"
   }
 }
