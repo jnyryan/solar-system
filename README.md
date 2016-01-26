@@ -9,3 +9,6 @@ http://learningthreejs.com/data/2014-01-10-flying-spaceship-minigame/slides/slid
 http://www.script-tutorials.com/webgl-with-three-js-lesson-5/
 
 [Codepen on Texturing the Earth](http://codepen.io/qkevinto/pen/EVGrGq)
+
+[rotate](http://jsfiddle.net/hbt9c/317/)
+[earth](http://codepen.io/qkevinto/pen/EVGrGq)

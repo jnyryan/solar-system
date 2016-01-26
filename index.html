@@ -7,8 +7,14 @@
 		</style>
 	</head>
 	<body>
+		<script src="./bower_components/jquery/dist/jquery.js"></script>
     <script src="./bower_components/threejs/build/three.min.js"></script>
 		<script src="./bower_components/threejs/examples/js/controls/OrbitControls.js"></script>
 	  <script src="./dist/app.min.js"></script>
+		<script>
+		$(function() {
+			new SolarSystem().init();
+		});
+		</script>
 	</body>
 </html>
